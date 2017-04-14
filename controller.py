@@ -57,6 +57,7 @@ class Controller:
 
         return self.data
 
+    # Handle Input
     def wait_for_input(self):
         pressed = []
         while True:

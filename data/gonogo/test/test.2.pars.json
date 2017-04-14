@@ -1,0 +1,1 @@
+{"max_rt": 1.5, "disp_resp": 0.75, "iti": 1.0, "frac_nogo": 0.4, "disp_resp_jitter": 0.25, "pts_per_correct": 50, "rot_dur": 0.05, "pts_decay": 0.5, "pts_offset": 0.35, "grid": [3, 3], "numtrials": 50000, "max_onset": 4.0, "min_onset": 1.5, "iti_jitter": 0.25}

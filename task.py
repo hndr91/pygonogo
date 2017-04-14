@@ -13,8 +13,9 @@ import json
 import os
 if os.name == 'nt':
     from Plexon import PlexClient
+    PlexClient = None
 else:
-    Plexon = None
+    PlexClient = None
 
 
 class Task:
@@ -41,7 +42,7 @@ class Task:
         self.display = display.Display(self.pars)
         self.data = []
 
-        if Plexon:
+        if PlexClient:
             self.plexon = PlexClient.PlexClient()
         else:
             self.plexon = None

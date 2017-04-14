@@ -18,7 +18,7 @@ log_handler_stderr = logging.StreamHandler()
 log_handler_stderr.setFormatter(log_formatter)
 logger.addHandler(log_handler_stderr)
 
-import os
+import os.path
 import ctypes
 try:
     from ctypes import Structure, windll
@@ -102,7 +102,7 @@ class PL_WaveLong(Structure):
                 ('WaveForm', ctypes.c_short * MAX_WF_LENGTH_LONG)]  ## The actual long waveform data
 
 libname = "PlexClient.dll"
-dirname = os.path.dirname(__file__)
+dirname = os.path.dirname(os.path.abspath(__file__))
 try:
     _lib = windll.LoadLibrary(os.path.join(dirname, libname))
 except:
