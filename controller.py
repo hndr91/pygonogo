@@ -13,6 +13,7 @@ class Controller:
         self.end_task = False
         self.mark_event = logger
         self.joystick = joystick
+        self.mouse = event.Mouse(visible=False, newPos=False, win=None)
 
     def open_trial(self):
         self.trialnum += 1
@@ -67,7 +68,8 @@ class Controller:
                 self.end_task = True
                 break
             elif pressed or (self.joystick and True in
-                self.joystick.getAllButtons()):
+                self.joystick.getAllButtons()) or self.mouse.getPressed()[0]:
+                self.mouse.clickReset()
                 self.input_received = True
                 self.mark_event('responded', channel=3)
                 break
