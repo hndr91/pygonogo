@@ -42,7 +42,7 @@ class Display:
                                           size=self.geom['target_size'],
                                           pos=self.geom['target_centers'][targ]))
             self.deftargs.append(ImageStim(self.win,
-                                           image='resources/padbg.jpg',
+                                           image='resources/padbg.png',
                                            size=self.geom['target_size'],
                                            pos=self.geom['target_centers'][targ]))
 
@@ -54,7 +54,7 @@ class Display:
     def setup_text(self):
         self.scoretxt = TextStim(self.win, text="Total Points: ",
                                  font='Helvetica', alignHoriz='left', alignVert='top', units='norm',
-                                 pos=(-1, 1), height=0.2, color=[178, 34, 34], colorSpace='rgb255',
+                                 pos=(-1, 1), height=0.2, color=[255, 255, 255], colorSpace='rgb255',
                                  wrapWidth=2)
 
         self.targtxt = []
