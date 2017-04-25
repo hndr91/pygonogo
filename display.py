@@ -29,20 +29,20 @@ class Display:
         self.notargs = []
         self.gotargs = []
         self.deftargs = []
-        self.bkimg = ImageStim(self.win, image='resources/pond.jpg',
+        self.bkimg = ImageStim(self.win, image='resources/blackbg.png',
                                units='norm', size=(2.0, 2.0))
 
         for targ in range(self.geom['numtargs']):
             self.notargs.append(ImageStim(self.win,
-                                          image='resources/rfrog2.jpg',
+                                          image='resources/nogo.jpg',
                                           size=self.geom['target_size'],
                                           pos=self.geom['target_centers'][targ]))
             self.gotargs.append(ImageStim(self.win,
-                                          image='resources/gfrog2.jpg',
+                                          image='resources/go.jpg',
                                           size=self.geom['target_size'],
                                           pos=self.geom['target_centers'][targ]))
             self.deftargs.append(ImageStim(self.win,
-                                           image='resources/lilypad.jpg',
+                                           image='resources/padbg.jpg',
                                            size=self.geom['target_size'],
                                            pos=self.geom['target_centers'][targ]))
 
