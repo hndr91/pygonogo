@@ -8,6 +8,7 @@ import initializers
 import controller
 import display
 import psychopy.event as event
+import psychopy.core as core
 import json
 
 import os
@@ -68,7 +69,8 @@ class Task:
             json.dump(self.data, fp)
 
     def run(self):
-        while not self.controller.end_task:
+        timer = core.CountdownTimer(20)
+        while timer.getTime() > 0: #not self.controller.end_task:
             self.controller.run_trial()
 
             # save data after each trial
@@ -76,3 +78,5 @@ class Task:
 
             if event.getKeys(keyList=['escape']):
                 break
+
+        self.controller.end_task = True
