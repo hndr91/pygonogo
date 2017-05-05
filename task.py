@@ -69,7 +69,7 @@ class Task:
             json.dump(self.data, fp)
 
     def run(self):
-        timer = core.CountdownTimer(20)
+        timer = core.CountdownTimer(300)
         while timer.getTime() > 0: #not self.controller.end_task:
             self.controller.run_trial()
 
