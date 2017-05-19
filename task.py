@@ -70,7 +70,9 @@ class Task:
 
     def run(self):
         timer = core.CountdownTimer(300)
-        while timer.getTime() > 0: #not self.controller.end_task:
+        # 
+         
+        while timer.getTime() > 0: # not self.controller.end_task:
             self.controller.run_trial()
 
             # save data after each trial
